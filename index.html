@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Situs Fan Resmi Taylor Swift - Jelajahi Eras, Gallery, Timeline Karier, Easter Eggs, dan cerita musik Taylor Swift">
+    <meta name="theme-color" content="#c9a961">
+    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    <title>Taylor Swift - The Eras Journey</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-text serif-font">✨ Taylor Swift ✨</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-subtext">Sedang memuat dunia Eras...</div>
+        <button class="skip-btn" onclick="skipLoading()">Skip</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand serif-font" href="#home">✨ Taylor Swift</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#easter-eggs">Easter Eggs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fan-corner">Fan Corner</a></li>
+                    <li class="nav-item">
+                        <button class="nav-btn theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="serif-font">The Eras Tour</h1>
+            <p>Jelajahi Perjalanan Musik Taylor Swift</p>
+            <div class="countdown-container mt-5" id="countdown">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+            <a href="#gallery" class="btn btn-primary mt-4">Mulai Jelajahi</a>
+        </div>
+    </section>
+
+    <!-- Era Theme Selector -->
+    <section id="era-selector" class="era-selector-section">
+        <div class="container">
+            <h3 class="text-center mb-4 serif-font">Pilih Era Favorit Anda</h3>
+            <div class="era-buttons-wrapper">
+                <button class="era-btn active" data-era="folklore" data-color="#a8845a" data-font-style="serif" title="Folklore - Earthy & Warm">
+                    <span>Folklore</span>
+                    <span class="year">(2020)</span>
+                </button>
+                <button class="era-btn" data-era="1989" data-color="#87ceeb" data-font-style="sans" title="1989 - Pastel & Bright">
+                    <span>1989</span>
+                    <span class="year">(2014)</span>
+                </button>
+                <button class="era-btn" data-era="midnights" data-color="#1a1a2e" data-font-style="sans" title="Midnights - Dark & Moody">
+                    <span>Midnights</span>
+                    <span class="year">(2022)</span>
+                </button>
+                <button class="era-btn" data-era="reputation" data-color="#2d1b2e" data-font-style="sans" title="Reputation - Bold & Dark">
+                    <span>Reputation</span>
+                    <span class="year">(2017)</span>
+                </button>
+                <button class="era-btn" data-era="lover" data-color="#ffb6d9" data-font-style="sans" title="Lover - Colorful & Bold">
+                    <span>Lover</span>
+                    <span class="year">(2019)</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Per Era -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container">
+            <h2 class="section-title serif-font">Gallery Per Era</h2>
+            
+            <!-- Folklore -->
+            <div class="era-gallery active" data-era="folklore">
+                <h4 class="era-title serif-font mb-4">Folklore (2020)</h4>
+                <p class="era-description">Album yang penuh cerita, seperti dongeng dengan latar belakang musim gugur yang indah.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/a8845a/ffffff?text=Folklore" alt="Folklore Album Cover" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Album Cover</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Album Cover</h5>
+                                <p>Desain minimalis dengan warna-warna alami yang mencerminkan tema cerita.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/a8845a/ffffff?text=The+Last+Great+American+Dynasty" alt="The Last Great American Dynasty" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Music Video</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>The Last Great American Dynasty</h5>
+                                <p>Video yang menceritakan kisah rumah bersejarah dengan cinematography yang stunning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/a8845a/ffffff?text=Cardigan+Performance" alt="Cardigan Performance" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Performance</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Cardigan Performance</h5>
+                                <p>Penampilan akustik yang intim menangkap esensi Folklore.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1989 -->
+            <div class="era-gallery" data-era="1989">
+                <h4 class="era-title serif-font mb-4">1989 (2014)</h4>
+                <p class="era-description">Era pop yang cerah, percaya diri, dan penuh warna pastel yang memukau.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/87ceeb/ffffff?text=1989+Cover" alt="1989 Album Cover" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Album Cover</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Album Cover</h5>
+                                <p>Minimal dan modern dengan polaroid aesthetic yang iconic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/87ceeb/ffffff?text=Shake+It+Off" alt="Shake It Off Music Video" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Music Video</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Shake It Off</h5>
+                                <p>Video yang colorful dengan berbagai tari gaya yang fun dan energik.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/87ceeb/ffffff?text=1989+Tour" alt="1989 World Tour" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Live Performance</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>1989 Tour</h5>
+                                <p>Pertunjukan spektakuler dengan stage design yang futuristik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midnights -->
+            <div class="era-gallery" data-era="midnights">
+                <h4 class="era-title serif-font mb-4">Midnights (2022)</h4>
+                <p class="era-description">Album yang gelap, intim, dan penuh misteri tentang dunia malam dan pikiran.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/1a1a2e/ffffff?text=Midnights+Cover" alt="Midnights Album Cover" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Album Cover</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Album Cover</h5>
+                                <p>Midnight blue dengan sentuhan mystical dan subtle glow effect.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/1a1a2e/ffffff?text=Anti-Hero" alt="Anti-Hero Music Video" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Music Video</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Anti-Hero</h5>
+                                <p>Video yang bold dan sarcastis dengan Taylor dalam berbagai karakter.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/1a1a2e/ffffff?text=Midnight+Concert" alt="Midnights Concert" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Performance</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Midnights Performance</h5>
+                                <p>Pertunjukan intim dengan lighting yang atmospheric dan moody.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reputation -->
+            <div class="era-gallery" data-era="reputation">
+                <h4 class="era-title serif-font mb-4">Reputation (2017)</h4>
+                <p class="era-description">Era yang bold, fierce, dan full of attitude dengan aesthetic serpent.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/2d1b2e/ffffff?text=Reputation+Cover" alt="Reputation Album Cover" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Album Cover</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Album Cover</h5>
+                                <p>Dark dengan snake imagery yang menggambarkan tema album.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/2d1b2e/ffffff?text=Look+What+You+Made" alt="Look What You Made Me Do" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Music Video</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Look What You Made Me Do</h5>
+                                <p>Video yang controversial dan penuh referensi dengan aesthetic gelap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/2d1b2e/ffffff?text=Rep+Tour" alt="Reputation Tour" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Tour</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Reputation Tour</h5>
+                                <p>Pertunjukan yang spektakuler dengan snake stage dan pyrotechnics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lover -->
+            <div class="era-gallery" data-era="lover">
+                <h4 class="era-title serif-font mb-4">Lover (2019)</h4>
+                <p class="era-description">Album yang colorful, joyful, dan penuh celebrasi cinta dalam segala bentuknya.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/ffb6d9/ffffff?text=Lover+Cover" alt="Lover Album Cover" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Album Cover</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Album Cover</h5>
+                                <p>Colorful gradient dengan aesthetic yang playful dan romantic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/ffb6d9/ffffff?text=ME+Video" alt="ME Music Video" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Music Video</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>ME! (feat. Brendon Urie)</h5>
+                                <p>Video yang colorful dan fun dengan pastel aesthetic dan friendship vibes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-card">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://via.placeholder.com/400x300/ffb6d9/ffffff?text=Lover+Concert" alt="Lover Concert" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <p>Live Performance</p>
+                                </div>
+                            </div>
+                            <div class="gallery-body">
+                                <h5>Lover Performance</h5>
+                                <p>Pertunjukan yang romantic dengan pastel stage design.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Timeline -->
+    <section id="timeline" class="timeline-section py-5">
+        <div class="container">
+            <h2 class="section-title serif-font">Timeline Karier Taylor Swift</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2006</h4>
+                        <h5>Debut Era</h5>
+                        <p>Taylor Swift merilis album debut "Taylor Swift" dengan hit single "Tim McGraw". Memulai perjalanan musiknya sebagai country artist.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2008-2009</h4>
+                        <h5>Fearless Era</h5>
+                        <p>Album "Fearless" dirilis, memenangkan Grammy Award for Album of the Year. Taylor menjadi artis termuda yang memenangkan award ini.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2010-2012</h4>
+                        <h5>Speak Now Era</h5>
+                        <p>"Speak Now" dirilis sebagai album yang ditulis sepenuhnya oleh Taylor. Album ini mencapai angka penjualan yang luar biasa.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2012-2013</h4>
+                        <h5>Red Era</h5>
+                        <p>Album "Red" menampilkan berbagai genre musik. Tur "Red Tour" menjadi salah satu tur paling sukses pada masa itu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2014-2015</h4>
+                        <h5>1989 Era</h5>
+                        <p>Transisi ke pop music dengan album "1989". Ini adalah era ketika Taylor resmi pindah dari country ke pop genre.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2016-2017</h4>
+                        <h5>Reputation Era</h5>
+                        <p>"Reputation" dirilis sebagai respons terhadap media scrutiny. Album ini lebih dark dan menunjukkan sisi fierce dari Taylor.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2019</h4>
+                        <h5>Lover Era</h5>
+                        <p>Album "Lover" merayakan cinta, persahabatan, dan kebahagiaan. Aesthetic yang colorful dan optimis menjadi ciri era ini.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2020-2021</h4>
+                        <h5>Folklore & Evermore</h5>
+                        <p>Dirilis dua album surprise dalam setahun - "Folklore" dan "Evermore". Kedua album ini menampilkan storytelling yang mendalam.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2021-Present</h4>
+                        <h5>Re-recording Era (Taylor's Versions)</h5>
+                        <p>Taylor mulai me-re-record albumnya untuk memiliki kontrol penuh atas musiknya. "Fearless (Taylor's Version)" menjadi yang pertama.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2022-2023</h4>
+                        <h5>Midnights Era</h5>
+                        <p>"Midnights" dirilis dengan surprise "3am Edition". Album ini mendominasi charts dan menjadi album tersingkat yang dirilis Taylor.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4 class="serif-font">2023-2024</h4>
+                        <h5>The Eras Tour</h5>
+                        <p>Tur terobosan yang mencakup semua era. Menjadi tur musik terbesar dan paling menguntungkan dalam sejarah musik modern.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Easter Egg Tracker -->
+    <section id="easter-eggs" class="easter-eggs-section py-5">
+        <div class="container">
+            <h2 class="section-title serif-font">🔍 Easter Egg Tracker</h2>
+            <p class="text-center mb-4 lead">Swifties, kalian pasti suka tebak-tebakan! Berikut adalah beberapa easter eggs yang sudah ditemukan:</p>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="egg-card">
+                        <div class="egg-header">
+                            <span class="egg-number">01</span>
+                            <h5 class="serif-font">All Too Well: The Short Film</h5>
+                        </div>
+                        <div class="egg-body">
+                            <p><strong>Clue:</strong> Red scarf di musik video</p>
+                            <p><strong>Easter Egg:</strong> Tanggal spesifik "October 21" tersembunyi di berbagai tempat dalam film, mereferensikan tanggal penting dalam cerita lagu.</p>
+                            <div class="egg-evidence">
+                                <small>📍 Dari: All Too Well (10 Minute Version) MV</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="egg-card">
+                        <div class="egg-header">
+                            <span class="egg-number">02</span>
+                            <h5 class="serif-font">Lover Lyrics Hidden Messages</h5>
+                        </div>
+                        <div class="egg-body">
+                            <p><strong>Clue:</strong> Lirik dalam "Lover"</p>
+                            <p><strong>Easter Egg:</strong> Beberapa lirik adalah references ke album-album sebelumnya, menceritakan kisah yang lebih besar dari love story Taylor.</p>
+                            <div class="egg-evidence">
+                                <small>📍 Dari: Lover (2019) Album</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="egg-card">
+                        <div class="egg-header">
+                            <span class="egg-number">03</span>
+                            <h5 class="serif-font">Midnights Clock Numbers</h5>
+                        </div>
+                        <div class="egg-body">
+                            <p><strong>Clue:</strong> Album cover dengan jam</p>
+                            <p><strong>Easter Egg:</strong> Setiap versi album cover menunjukkan waktu yang berbeda, dan waktu-waktu ini memiliki makna khusus.</p>
+                            <div class="egg-evidence">
+                                <small>📍 Dari: Midnights (2022) Album Cover Variants</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="egg-card">
+                        <div class="egg-header">
+                            <span class="egg-number">04</span>
+                            <h5 class="serif-font">Reputation Snake References</h5>
+                        </div>
+                        <div class="egg-body">
+                            <p><strong>Clue:</strong> Social media posts</p>
+                            <p><strong>Easter Egg:</strong> Taylor menggunakan emoji ular untuk mengumumkan era reputation. Fans menemukan pattern dalam postingan yang mereferensikan pertengkaran sebelumnya.</p>
+                            <div class="egg-evidence">
+                                <small>📍 Dari: Instagram & Twitter Posts (2017)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="egg-card">
+                        <div class="egg-header">
+                            <span class="egg-number">05</span>
+                            <h5 class="serif-font">Folklore Cardigan Color Theory</h5>
+                        </div>
+                        <div class="egg-body">
+                            <p><strong>Clue:</strong> Warna cardigan di musik video</p>
+                            <p><strong>Easter Egg:</strong> Warna cardigan di music video mewakili mood berbeda di setiap act, mencerminkan evolusi emosi dalam cerita.</p>
+                            <div class="egg-evidence">
+                                <small>📍 Dari: Cardigan Music Video (2020)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="egg-card">
+                        <div class="egg-header">
+                            <span class="egg-number">06</span>
+                            <h5 class="serif-font">1989 Magazine Cover Easter Egg</h5>
+                        </div>
+                        <div class="egg-body">
+                            <p><strong>Clue:</strong> Magazine yang Taylor pegang di photoshoot</p>
+                            <p><strong>Easter Egg:</strong> Majalah dalam foto memiliki headlines yang berhubungan dengan lagu-lagu di album 1989.</p>
+                            <div class="egg-evidence">
+                                <small>📍 Dari: 1989 Promotional Photoshoot (2014)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="egg-tracker-game mt-5">
+                <h4 class="serif-font mb-4 text-center">🎮 Interactive Easter Egg Finder</h4>
+                <p class="text-center mb-3">Klik area tersembunyi di bawah untuk menemukan Easter Egg rahasia!</p>
+                <div class="hidden-egg-area" id="hidden-egg">
+                    <p>Hover atau klik di sini...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section py-5">
+        <div class="container">
+            <h2 class="section-title serif-font">🎵 Guess The Lyric Quiz</h2>
+            <p class="text-center mb-4">Berapa banyak lirik Taylor Swift yang bisa kamu tebak?</p>
+
+            <div class="quiz-container" id="quiz-container">
+                <div class="quiz-card">
+                    <div class="quiz-progress">
+                        <div class="progress">
+                            <div class="progress-bar" id="quiz-progress-bar" style="width: 0%"></div>
+                        </div>
+                        <p class="text-center"><span id="current-question">1</span> dari <span id="total-questions">10</span></p>
+                    </div>
+
+                    <div class="quiz-content">
+                        <h4 class="serif-font mb-3" id="quiz-question">Pertanyaan akan muncul di sini...</h4>
+                        <div class="quiz-options" id="quiz-options"></div>
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Selanjutnya</button>
+                    </div>
+                </div>
+
+                <div class="quiz-result" id="quiz-result" style="display: none;">
+                    <h3 class="serif-font mb-3">Quiz Selesai! 🎉</h3>
+                    <div class="result-display">
+                        <div class="result-score">
+                            <span id="final-score">0</span>
+                            <span>/ 10</span>
+                        </div>
+                        <p id="result-message" class="lead"></p>
+                    </div>
+                    <button class="btn btn-primary mt-4" onclick="restartQuiz()">Mainkan Lagi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotify Playlist Embed -->
+    <section id="playlist" class="playlist-section py-5">
+        <div class="container">
+            <h2 class="section-title serif-font">🎶 The Eras Playlist</h2>
+            <p class="text-center mb-4">Dengarkan lagu-lagu favorit Taylor Swift sambil menjelajahi halaman ini</p>
+            
+            <div class="playlist-container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="spotify-embed">
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ52bnZHMXrFM?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                        <p class="text-center mt-3 small">Playlist: Taylor Swift - Greatest Hits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fan Corner -->
+    <section id="fan-corner" class="fan-corner-section py-5">
+        <div class="container">
+            <h2 class="section-title serif-font">💝 Fan Corner</h2>
+            <p class="text-center mb-4">Berbagi fan art, quote favorit, atau pesan untuk Taylor Swift!</p>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="fan-form-card">
+                        <form id="fan-form" class="fan-form">
+                            <div class="mb-3">
+                                <label for="fan-name" class="form-label">Nama Kamu</label>
+                                <input type="text" class="form-control" id="fan-name" placeholder="Masukkan nama kamu" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fan-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="fan-email" placeholder="email@example.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fan-type" class="form-label">Tipe Konten</label>
+                                <select class="form-control" id="fan-type" required>
+                                    <option value="">-- Pilih Tipe --</option>
+                                    <option value="fan-art">Fan Art</option>
+                                    <option value="favorite-quote">Favorite Quote</option>
+                                    <option value="message">Message untuk Taylor</option>
+                                    <option value="story">Kisah Personal</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fan-message" class="form-label">Pesan / Deskripsi</label>
+                                <textarea class="form-control" id="fan-message" rows="5" placeholder="Bagikan ceritamu..." required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fan-image" class="form-label">Upload Gambar/Fan Art (Optional)</label>
+                                <input type="file" class="form-control" id="fan-image" accept="image/*">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+                        </form>
+
+                        <div id="form-success" class="alert alert-success mt-3" style="display: none;">
+                            <i class="bi bi-check-circle"></i> Terima kasih! Pesan kamu telah diterima. Taylor akan membacanya! 💕
+                        </div>
+                    </div>
+
+                    <div class="fan-messages mt-5">
+                        <h4 class="serif-font mb-4">Pesan dari Swifties Lainnya</h4>
+                        <div class="fan-message-list" id="fan-message-list">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4">
+                    <h5 class="serif-font mb-3">✨ Taylor Swift</h5>
+                    <p>Situs fan yang dibuat dengan ❤️ untuk merayakan musik dan perjalanan Taylor Swift</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="serif-font mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#easter-eggs">Easter Eggs</a></li>
+                        <li><a href="#quiz">Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="serif-font mb-3">Follow Taylor</h5>
+                    <div class="social-links">
+                        <a href="https://instagram.com/taylorswift" target="_blank" title="Instagram" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/taylorswift13" target="_blank" title="Twitter" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com/@taylorswift" target="_blank" title="TikTok" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com/@taylorswift" target="_blank" title="YouTube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf94" target="_blank" title="Spotify" aria-label="Spotify">
+                            <i class="bi bi-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2024 Taylor Swift Fan Site. This is not an official Taylor Swift website. Made with 💕 for Swifties everywhere</p>
+        </div>
+    </footer>
+
+    <!-- Hidden Easter Egg Modal -->
+    <div class="modal fade" id="easterEggModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title serif-font">✨ Easter Egg Found! ✨</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <h3 class="mb-3">Secret Message Unlocked!</h3>
+                    <p class="lead">"All too well, you kept me like a secret, but I kept you like an oath"</p>
+                    <p class="text-muted">- All Too Well (10 Minute Version)</p>
+                    <p class="mt-4">💡 Fun Fact: "All Too Well" adalah lagu yang paling banyak direferensikan oleh Swifties karena liriknya yang sangat specific dan emotional!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

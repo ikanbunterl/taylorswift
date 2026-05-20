@@ -1,0 +1,133 @@
+{
+  "name": "Taylor Swift - The Eras Journey",
+  "short_name": "Eras Journey",
+  "description": "Jelajahi perjalanan musik Taylor Swift melalui semua eransnya dengan galeri interaktif, timeline karier, quiz, dan easter eggs!",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f1e8",
+  "theme_color": "#c9a961",
+  "categories": ["music", "entertainment", "reference"],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/192x192/c9a961/ffffff?text=Taylor+Swift",
+      "type": "image/png",
+      "sizes": "192x192",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/c9a961/ffffff?text=Taylor+Swift",
+      "type": "image/png",
+      "sizes": "512x512",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23c9a961' width='192' height='192'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='120' fill='white' font-family='serif' font-weight='bold'>✨</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%23c9a961' width='512' height='512'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='320' fill='white' font-family='serif' font-weight='bold'>✨</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23c9a961' width='192' height='192' rx='45'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='120' fill='white' font-family='serif' font-weight='bold'>✨</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%23c9a961' width='512' height='512' rx='120'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='320' fill='white' font-family='serif' font-weight='bold'>✨</text></svg>",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Gallery",
+      "short_name": "Gallery",
+      "description": "Lihat galeri Taylor Swift per era",
+      "url": "/#gallery",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23c9a961' width='96' height='96'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='white'>🎨</text></svg>",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Timeline",
+      "short_name": "Timeline",
+      "description": "Jelajahi timeline karier Taylor Swift",
+      "url": "/#timeline",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23c9a961' width='96' height='96'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='white'>📅</text></svg>",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Quiz",
+      "short_name": "Quiz",
+      "description": "Main Guess The Lyric Quiz",
+      "url": "/#quiz",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23c9a961' width='96' height='96'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='white'>🎵</text></svg>",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Easter Eggs",
+      "short_name": "Eggs",
+      "description": "Temukan easter eggs tersembunyi",
+      "url": "/#easter-eggs",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23c9a961' width='96' height='96'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='white'>🔍</text></svg>",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Fan Corner",
+      "short_name": "Fan",
+      "description": "Bagikan fan art dan cerita kamu",
+      "url": "/#fan-corner",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23c9a961' width='96' height='96'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='60' fill='white'>💝</text></svg>",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/#fan-corner",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "lang": "id-ID",
+  "dir": "ltr"
+}
